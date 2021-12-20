@@ -13,8 +13,5 @@ const ChatWrapper = styled.div`
     display:flex;
     flex-direction:column;
     flex:0.65;
-
-    border-style: solid;
-    border-color: orange;
 `;
 export default Chat
