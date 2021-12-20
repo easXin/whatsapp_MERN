@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Avatar from "@mui/material/Avatar";
-import HeaderRightMenu from "./chatCmp/HeaderRightMenu";
-import HeaderSearchBar from "./chatCmp/HeaderSearchBar";
-import HeaderChatInfo from "./chatCmp/HeaderChatInfo";
+import HeaderRightMenu from "./sidebarCmp/HeaderRightMenu";
+import HeaderSearchBar from "./sidebarCmp/HeaderSearchBar";
+import HeaderChatInfo from "./sidebarCmp/HeaderChatInfo";
 
 function Sidebar() {
   return (
