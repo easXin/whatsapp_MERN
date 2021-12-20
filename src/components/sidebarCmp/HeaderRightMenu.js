@@ -27,7 +27,7 @@ const RightMenuContainer = styled.div`
   min-width: 10vw;
 
   .MuiSvgIcon-root {
-    margin-right: 2vw;
+    margin-right: 1px;
     font-size: 24px !important;
   }
 `;

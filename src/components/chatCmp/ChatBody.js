@@ -1,19 +1,28 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
+import Receiver from "./body/Receiver";
+import Sender from "./body/Sender";
 function ChatBody() {
-    return (
-        <BodyWrapper>
-            <span>Sonny</span>
-
-            <p>This place reserve for the message windows
-                <span>
-                    {new Date().toUTCString()}
-                </span>
-            </p>
-        </BodyWrapper>
-    )
+  return (
+    <BodyWrapper>
+      <Sender/>
+      <Receiver/>
+      <Sender/>
+      <Sender/>
+      <Sender/>
+      <Receiver/>
+      <Receiver/>
+    </BodyWrapper>
+  );
 }
 
-export default ChatBody
+export default ChatBody;
 
-const BodyWrapper = styled.div``;
+const BodyWrapper = styled.div`
+    flex:1;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    background-repeat:repeat;
+    background-position: center;
+    padding:30px;
+    overflow:scroll;
+`;
