@@ -8,7 +8,6 @@ import HeaderChatInfo from "./sidebarCmp/HeaderChatInfo";
 function Sidebar() {
   return (
     <SideBarWrapper>
-      
       <SideBarHeader>
         <Avatar
           alt="User Profile"
@@ -22,6 +21,7 @@ function Sidebar() {
       </SideBarSearch>
 
       <SideBarChat>
+        <h1>Add New Chat</h1>
         <HeaderChatInfo/>
         <HeaderChatInfo/>
         <HeaderChatInfo/>
@@ -58,6 +58,13 @@ const SideBarChat = styled.div`
   /* &{
     -webkit-scrollbar: width: 12px;
   } */
+  h1{
+    margin-left:3px;
+    padding:20px;
+    &:hover{
+      background-color:#ebebebeb;
+  }
+  }
 `;
 
 export default Sidebar;
