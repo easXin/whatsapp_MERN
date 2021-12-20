@@ -8,7 +8,7 @@ import HeaderChatInfo from "./chatCmp/HeaderChatInfo";
 function Sidebar() {
   return (
     <SideBarWrapper>
-      {/* avatar  + menu */}
+      
       <SideBarHeader>
         <Avatar
           alt="User Profile"
@@ -17,12 +17,10 @@ function Sidebar() {
         <HeaderRightMenu/>
       </SideBarHeader>
 
-      {/* search bar */}
       <SideBarSearch>
         <HeaderSearchBar/>
       </SideBarSearch>
 
-      {/* chatting contact list */}
       <SideBarChat>
         <HeaderChatInfo/>
         <HeaderChatInfo/>
