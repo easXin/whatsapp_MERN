@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-function Receiver() {
+function Receiver({ name, message, timeStamp }) {
   return (
     <MessageWrapper>
-      <Name>Jessica</Name>
-      This place reserve for the message windows
-      <TimeStamp>{new Date().toUTCString()}</TimeStamp>
+      <Name>{name}</Name>
+      {message}
+      <TimeStamp>{timeStamp}</TimeStamp>
     </MessageWrapper>
   );
 }
@@ -13,14 +13,14 @@ function Receiver() {
 export default Receiver;
 
 const MessageWrapper = styled.div`
-    position: relative;
-    font-size:16px;
-    padding:10px;
-    width:fit-content;
-    border-radius:10px;
-    margin-bottom:30px;
-    background-color:#dcf8c6;
-    margin-left:auto;
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background-color: #dcf8c6;
+  margin-left: auto;
 `;
 
 const TimeStamp = styled.span`

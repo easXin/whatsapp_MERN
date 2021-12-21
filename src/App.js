@@ -1,13 +1,43 @@
+import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import Chat from "./components/Chat";
 import Sidebar from "./components/Sidebar";
+import Pusher from "pusher-js";
+import axios from './axios';
 
 function App() {
+  const [message,setMessage] = useState([])
+
+  useEffect(()=>{
+    axios.get('/messages/sync')
+      .then(res =>{
+        setMessage(res.data)
+      })
+  },[])
+  
+  useEffect(() => {
+    const pusher = new Pusher('da5bff56cd72905c051f', {
+      cluster: 'us2'
+    });
+
+    const channel = pusher.subscribe('messages');
+    
+    channel.bind('inserted', (newMessage)=> {
+      console.log(newMessage)
+      setMessage([...message,newMessage])
+    });
+
+    return ()=>{
+      channel.unbind_all()
+      channel.unsubscribe()
+    }
+  }, [message])
+
   return (
     <Wrapper>
       <WrapperBody>
         <Sidebar />
-        <Chat />
+        <Chat message={message}/>
       </WrapperBody>
     </Wrapper>
   );

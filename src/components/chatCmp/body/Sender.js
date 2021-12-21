@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-function Sender() {
+function Sender({name,message,timeStamp}) {
   return (
     <MessageWrapper>
-      <Name>Sonny</Name>
-      This place reserve for the message windows
-      <TimeStamp>{new Date().toUTCString()}</TimeStamp>
+      <Name>{name}</Name>
+      {message}
+      <TimeStamp>{timeStamp}</TimeStamp>
     </MessageWrapper>
   );
 }
